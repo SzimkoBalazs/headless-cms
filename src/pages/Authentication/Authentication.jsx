@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import viteLogo from '/vite.svg'; // Assuming you have the Vite logo in your public folder or imported correctly.
+import viteLogo from '/vite.svg'
 
 
 const Authentication = () => {
