@@ -42,12 +42,20 @@ const Sidebar = ({children}) => {
   )
 }
 
-export function SidebarItem({icon, text, active, alert}){
+export function SidebarItem({icon, text, active, alert, onClick}){
 
  const { expanded } = useContext(SidebarContext)
 
+ console.log(`Rendering SidebarItem: ${text}`); // This should log each time the component is rendered
+
     return(
-        <li className={`
+        <li onClick={() => {
+            console.log(`Clicked on ${text}`); // This should log when you click on the item
+            onClick();
+          }}
+        
+        
+        className={`
             relative flex items-center max-h-[36px] py-2 px-3 my-1
             font-medium rounded-md cursor-pointer
             transition-colors group
